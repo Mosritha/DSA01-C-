@@ -1,0 +1,36 @@
+#include<iostream>
+using namespace std;
+class student{
+	private:char name[20],address[30];
+	int rollno;
+	public: student();
+	        ~student();
+	        void read();
+	        void disp();
+};
+   student::student()
+   {
+   	cout<<"constructor called"<<endl;
+   }
+   void student::read(){
+   	cout<<"student name";
+   	cin>>name;
+   	cout<<"student address";
+   	cin>>address;
+   	cout<<"student rollno";
+   	cin>>rollno;
+   }
+   void student::disp(){
+   	cout<<"student details"<<endl;
+   	cout<<"student name"<<name<<endl;
+   	cout<<"student address"<<address<<endl;
+   	cout<<"student rollno"<<rollno<<endl;
+   }
+   student::~student(){
+   	cout<<"destructor called"<<endl;
+   }
+   int main(){
+   	student s;
+   	s.read();
+   	s.disp();
+   }
